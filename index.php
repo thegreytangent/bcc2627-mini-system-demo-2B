@@ -1,4 +1,6 @@
 <?php include __DIR__.'/classes/Page.php'; ?>
+<?php include __DIR__.'/classes/Person.php'; ?>
+<?php include __DIR__.'/classes/Student.php'; ?>
 <html>
 <?php include __DIR__.'/components/head.php'; ?>
 <body>
