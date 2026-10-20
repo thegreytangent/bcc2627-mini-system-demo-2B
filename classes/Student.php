@@ -2,7 +2,7 @@
 
 class Student extends Person
 {
-    public string $student_number;
+    protected string $student_number;
     protected string $dob;
 
     public function __construct(string $student_number, string $firstname, string $lastname, string $dob)
@@ -13,10 +13,13 @@ class Student extends Person
     }
 
     public function completeName(): string {
-        return  $this->lastname .", ".$this->firstname;
+        return  ucfirst($this->lastname) .", ".ucfirst($this->firstname);
     }
 
     public function getDOB(): string {
         return $this->dob;
+    }
+    public function getStudentNumber(): string {
+        return $this->student_number;
     }
 }

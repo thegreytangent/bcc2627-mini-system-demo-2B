@@ -18,9 +18,9 @@
             
           <?php foreach (StudentRepository::all() as $student) { ?>
               <tr>
-                <td><?php echo $student['student_number'] ?></td>
-                <td><?php echo $student['firstname'] ?></td>
-                <td><?php echo $student['date_of_birth'] ?></td>
+               <td><?php echo $student->getStudentNumber(); ?></td>
+                <td><?php echo $student->completeName(); ?></td>
+                 <td><?php echo $student->getDOB(); ?></td>
                 <td>
                   <button class="btn btn-info">Edit</button>
                   <button class="btn btn-danger">Delete</button>
