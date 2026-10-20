@@ -1,24 +1,3 @@
-<?php
-$students = [
-  [
-    'id' => 1,
-    'student_number' => '12-123',
-    'firstname' => 'Juan',
-    'lastname' => 'Dela Cruz',
-    'date_of_birth' => 'Sep. 2, 2023'
-  ],
-  [
-    'id' => 2,
-    'student_number' => '12-234',
-    'firstname' => 'Mike',
-    'lastname' => 'Cruz',
-    'date_of_birth' => 'Sep. 2, 2023'
-  ]
-];
-
-?>
-
-
 <main class="content">
   <div class="container-fluid">
     <div class="row">
@@ -36,7 +15,8 @@ $students = [
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($students as $student) { ?>
+            
+          <?php foreach (StudentRepository::all() as $student) { ?>
               <tr>
                 <td><?php echo $student['student_number'] ?></td>
                 <td><?php echo $student['firstname'] ?></td>
