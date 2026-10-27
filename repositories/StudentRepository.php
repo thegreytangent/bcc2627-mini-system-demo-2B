@@ -27,10 +27,13 @@ class StudentRepository extends DBRepository implements IStudentRepository
         return [];
     }
 
-    public static function save(array $student)
+    public static function create(array $s)
     {
-        return [];
-    }
+         $sql = "INSERT INTO student (student_number, firstname, lastname, dob )"; 
+         $sql .= " VALUES ('".$s['student_number']."', '".$s['firstname']."', ";
+         $sql .= " '".$s['lastname']."', '".$s['dob']."')";
+        self::connection()->query($sql);
+        }
 
     public static function update(array $student, string $id)
     {

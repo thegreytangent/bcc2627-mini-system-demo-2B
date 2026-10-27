@@ -6,7 +6,7 @@ interface IStudentRepository {
 
   public static function find(string $id);
 
-  public static function save(array $student);
+  public static function create(array $student);
 
   public static function update(array $student, string $id);
 
