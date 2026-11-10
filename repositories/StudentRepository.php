@@ -16,6 +16,7 @@ class StudentRepository extends DBRepository implements IStudentRepository
                 $s['firstname'],
                 $s['lastname'],
                 $s['dob'],
+                $s['id'],
             );
         }
 
@@ -42,7 +43,8 @@ class StudentRepository extends DBRepository implements IStudentRepository
 
     public static function delete(string $id)
     {
-        return [];
+        $sql = "DELETE FROM student WHERE id = ".$id;
+        self::connection()->query($sql);
     }
 
     public function getAll(): array

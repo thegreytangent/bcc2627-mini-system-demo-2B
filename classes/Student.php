@@ -5,11 +5,11 @@ class Student extends Person
     protected string $student_number;
     protected string $dob;
 
-    public function __construct(string $student_number, string $firstname, string $lastname, string $dob)
+    public function __construct(string $student_number, string $firstname, string $lastname, string $dob, int $id)
     {
         $this->student_number = $student_number;
         $this->dob = $dob;
-        parent::__construct($firstname, $lastname);
+        parent::__construct($firstname, $lastname, $id);
     }
 
     public function completeName(): string {
@@ -22,4 +22,6 @@ class Student extends Person
     public function getStudentNumber(): string {
         return $this->student_number;
     }
+
+
 }
